@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php // var_dump($_ENV) ?>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -31,7 +32,7 @@
                                 <li>PHP <?= phpversion(); ?></li>
                                 <li>
                                     <?php
-                                    $link = mysqli_connect("database", "root", $_ENV['MYSQL_ROOT_PASSWORD'], null);
+                                    $link = mysqli_connect("lamp-mariadb106", "root", $_ENV['MYSQL_ROOT_PASSWORD'], null);
 
 /* check connection */
                                     if (mysqli_connect_errno()) {
