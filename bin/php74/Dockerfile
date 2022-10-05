@@ -49,6 +49,10 @@ RUN apt-get update && \
     pecl install imagick && \
     docker-php-ext-enable imagick
 
+# Install BCmath
+RUN docker-php-ext-install bcmath
+
+
 # Other PHP7 Extensions
 
 RUN docker-php-ext-install pdo_mysql && \
